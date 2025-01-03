@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formpage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 style="font-family:Arial, Helvetica, sans-serif;">User Input Form</h1>
+
+    <form id="homeworkForm">
+        <div class="form-container">
+            <!-- First Column -->
+             
+            <div class="form-column">
+                <fieldset>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+">
+
+                <label for="middleInitial">Middle Initial:</label>
+                <input type="text" id="middleInitial" name="middleInitial" maxlength="1" pattern="[A-Za-z]">
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]+">
+
+                <label for="country">I am from:</label>
+                <select id="country" name="country">
+                    <option value="India">India</option>
+                    <option value="Germany">Germany</option>
+                    <option value="USA">USA</option>
+                    <option value="Other">Other</option>
+                </select>
+            </fieldset>
+            </div>
+
+            <!-- Second Column -->
+            <div class="form-column">
+                <fieldset>
+                <label for="matriculation">Matriculation Number:</label>
+                <input type="text" id="matriculation" name="matriculation" required pattern="\d+">
+
+                <label for="semester">Semester:</label>
+                <input type="number" id="semester" name="semester" min="1" max="10" required>
+
+                <label for="program">Graduate Program:</label>
+                <select id="program" name="program">
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                </select>
+
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+            </fieldset>
+            </div>
+   
+        </div>
+    
+            <legend>I heard about this graduate program from:</legend>
+            <div class="radio-group">
+                <label>
+                    <input type="checkbox" name="source" value="Media" required>
+                    Media
+                </label>
+                <label>
+                    <input type="checkbox" name="source" value="Ad">
+                    Ad
+                </label>
+                <label>
+                    <input type="checkbox" name="source" value="Agency">
+                    Agency
+                </label>
+                <label>
+                    <input type="checkbox" name="source" value="Other">
+                    Other
+                </label>
+            </div>
+
+            <legend>When i finish my studies i will:</legend>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="source" value="Return to my country" required>
+                    Return to my country
+                </label>
+                <label>
+                    <input type="radio" name="source" value="Find a job in europe">
+                    Find a job in europe
+                </label>
+                <label>
+                    <input type="checkbox" name="source" value="Do a practical training and then decide">
+                    Do a practical training and then decide
+                </label>
+            </div>
+  
+        
+
+        <!-- <fieldset>
+            <legend>Preferences</legend>
+            <label>
+                <input type="checkbox" name="preference" value="CSS">
+                CSS
+            </label>
+            <label>
+                <input type="checkbox" name="preference" value="JavaScript">
+                JavaScript
+            </label>
+        </fieldset> -->
+
+        <label for="feedback">Feedback for the course:</label>
+        <textarea id="feedback" name="feedback" required></textarea>
+
+        <!-- <button type="submit">Submit</button> -->
+        <fieldset>
+            <!-- <legend>Write About SDLC Methodologies</legend> -->
+            <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                I will write a paragraph for each methodology of <a href="https://www.techtarget.com/searchsoftwarequality/definition/systems-development-life-cycle" target="_blank" rel="noopener noreferrer">SDLC</a>. There are many of them, but I will suggest a few, and my suggestions and reasons are as follows:
+                
+            </p>
+        
+            <ol style="font-family: 'Courier New', Courier, monospace;" class="sdlc-points">
+                <li><strong>a)</strong> Waterfall Methodology: A linear and sequential approach where each phase depends on the deliverables of the previous one.</li>
+                <li><strong>b)</strong> Agile Methodology: An iterative approach focusing on collaboration, customer feedback, and rapid releases.</li>
+                <li><strong>c)</strong> Scrum Framework: A subset of Agile with structured sprints and roles like Scrum Master and Product Owner.</li>
+            </ol>
+      
+                
+                <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Among so many SDLC Methodologies, the ones that are in the Agile classification are better. 
+                    Among Agile SDLC Methods, I have a few suggestions:
+                </p>
+            
+                <ol style="font-family: 'Courier New', Courier, monospace;" class="agile-points">
+                    <li>Scrum: A framework that helps teams work collaboratively in sprints to deliver increments of functionality.</li>
+                    <li>Kanban: A visual system for managing work as it moves through a process, focusing on just-in-time delivery.</li>
+                    <li>Extreme Programming (XP): A methodology emphasizing communication, simplicity, feedback, and flexibility to accommodate changing requirements.</li>
+                </ol>
+           
+            
+        </fieldset>
+        
+    </form>
+
+    <footer>
+        <p>Learn more about <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>, 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>, and 
+        <a href="#" id="sdlcLink">SDLC</a>.</p>
+    </footer>
+</body>
+</html>
